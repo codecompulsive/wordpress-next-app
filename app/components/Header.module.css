@@ -1,0 +1,145 @@
+
+
+.site-header{
+    background-color:rgb(38, 134, 149);
+    min-height:70px;
+   position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.site-header-container{
+    width:100%;
+    min-height:70px;
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, nav right */
+    align-items: center;
+}
+.site-logo{
+    display:block;
+    width:70px;
+    height:auto;
+    margin-left:20px;
+}
+.site-logo img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.site-navigation{
+  
+}
+
+
+ul.site-menu{
+    padding:0px;
+    margin: 0;
+}
+ul.site-menu li{
+   font-size:2.4rem;
+}
+
+/* mobile menu button */
+.site-menu-button{
+position:absolute;
+z-index:1;
+right:10px;
+top:10px;
+width:52px;
+padding:12px;
+display:block;
+cursor:pointer;
+}
+
+
+.site-header-open {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Optional: forces the header to take up the full screen */
+  z-index: 999; 
+}
+
+.site-menu {
+  display: none;
+  position:static;
+  margin:0;
+       position:absolute;
+     top:0;
+     bottom:0;
+     left:0;
+     right:0;
+     margin:auto;
+}
+
+.site-header-open .site-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Centers your menu links inside the full screen header */
+}
+
+
+.menu-icon{
+  fill:#fff;
+}
+
+/* Header.module.css */
+.menu-top-bar,
+.menu-middle-bar,
+.menu-bottom-bar {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.site-menu-button.open .menu-top-bar {
+  transform: translateY(20px) rotate(45deg);
+}
+
+.site-menu-button.open .menu-middle-bar {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.site-menu-button.open .menu-bottom-bar {
+  transform: translateY(-20px) rotate(-45deg);
+}
+
+
+
+
+
+
+/* ======================================= */
+/* DESKTOP STYLES */
+/* ======================================= */
+
+@media (min-width: 768px) {
+
+  .site-header-open {
+    position: relative;
+    height: auto;
+  }
+
+  .site-menu-button{
+display:none;
+}
+
+ 
+ .site-menu{
+    padding:0px;
+   display:flex;
+     flex-direction: row;
+position:static;
+
+}
+ul.site-menu li{
+    padding-right:20px;
+   font-size:1.2rem;
+}
+
+}

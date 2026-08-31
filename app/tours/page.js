@@ -2,6 +2,8 @@
 import { getPageBySlug } from '@/lib/wordpress';
 import { notFound } from 'next/navigation';
 
+
+
 export default async function ToursPage() {
   // Fetch both the tours page and the site-footer page from WordPress
   const [page, footerPage] = await Promise.all([

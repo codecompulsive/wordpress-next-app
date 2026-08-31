@@ -6,7 +6,6 @@ import styles from './Header.module.css';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
@@ -24,8 +23,9 @@ export default function Header() {
           {/* 2. The menu also retains its open class if you need to style internal children */}
           <ul className={`${styles['site-menu']} ${isOpen ? styles['site-menu-open'] : ''}`}>
             <li><Link href="/" onClick={closeMenu}>Home</Link></li>
-            <li><Link href="/company" onClick={closeMenu}>Company</Link></li>
             <li><Link href="/tours" onClick={closeMenu}>Tours</Link></li>
+            <li><Link href="/company" onClick={closeMenu}>Company</Link></li>
+            <li><Link href="/blog" onClick={closeMenu}>Blog</Link></li>
             <li><Link href="/contact" onClick={closeMenu}>Contact</Link></li>
           </ul>
 

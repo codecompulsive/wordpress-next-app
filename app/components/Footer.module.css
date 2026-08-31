@@ -53,17 +53,15 @@ font-style: normal;
   margin: 0 auto 0.75rem auto;
 }
 
- 
-
-
-
+.site-footer a:hover{
+  color:#ecac35;
+}
 
 ul.social-links{
   margin:0;
   padding:0;
   display:flex;
 }
-
 
 ul.social-links {
 width:100px;  
@@ -72,7 +70,7 @@ margin:0 auto;
 }
 ul.social-links li{
   padding:4px;
-  flex: 0 0 50px; /* 4 columns by default */
+  flex: 0 0 50px; 
 }
 
 
@@ -81,7 +79,6 @@ ul.social-links li{
 /* ======================================= */
 
 @media (min-width: 768px) {
-
 
  .footer-container {
   display:flex;
@@ -94,7 +91,6 @@ ul.social-links li{
 .footer-column h3{
   font-size:1.4rem;
 }
-
 
 
 }
